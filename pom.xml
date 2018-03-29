@@ -7,8 +7,9 @@
 	<artifactId>cinema</artifactId>
 	<version>1.0</version>
 
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
+	<description>Spring Boot Web JSP Example</description>
 	<name>${project.artifactId}</name>
 	<url>http://maven.apache.org</url>
 
@@ -133,6 +134,13 @@
 		<!-- <version>${org.hibernate.validator}</version> -->
 		<!-- </dependency> -->
 		
+		<!-- - - - - - Web - - - - - -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+<!-- 			<version>${javax.servlet.jstl.version}</version> -->
+		</dependency>
+		
 		<!-- - - - - - Spring JPA - - - - - -->
 		<!-- <dependency> -->
 		<!-- <groupId>org.springframework</groupId> -->
@@ -182,12 +190,42 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Need this to compile JSP, tomcat-embed-jasper version is not working, 
+			no idea why -->
+		<dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>4.6.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Optional, test for static content, bootstrap CSS -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+
 		<!-- - - - - - JSON - - - - - -->
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
