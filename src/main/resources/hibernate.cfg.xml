@@ -34,6 +34,13 @@
 		<!-- Echo all executed SQL to stdout -->
 <!--     	<property name="show_sql">true</property> -->
     	
-		<mapping resource="Honey.hbm.xml" />
+<!--     	<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> -->
+<!--     	<property name="hibernate.cache.use_second_level_cache">false</property> -->
+		<property name="hibernate.cache.use_query_cache">false</property>
+	    	
+<!-- 		<mapping resource="Honey.hbm.xml" /> -->
+		<mapping resource="entity/Book.hbm.xml" />
+		<mapping resource="entity/Reader.hbm.xml" />
+		<mapping resource="entity/Using.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
