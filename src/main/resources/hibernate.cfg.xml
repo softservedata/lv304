@@ -39,8 +39,16 @@
 		<property name="hibernate.cache.use_query_cache">false</property>
 	    	
 <!-- 		<mapping resource="Honey.hbm.xml" /> -->
-		<mapping resource="entity/Book.hbm.xml" />
-		<mapping resource="entity/Reader.hbm.xml" />
-		<mapping resource="entity/Using.hbm.xml" />
+<!-- 		<mapping resource="entity/Book.hbm.xml" /> -->
+<!-- 		<mapping resource="entity/Reader.hbm.xml" /> -->
+<!-- 		<mapping resource="entity/Using.hbm.xml" /> -->
+
+<!-- 		<mapping class="com.softserve.edu.Book" /> -->
+<!-- 		<mapping class="com.softserve.edu.Reader" /> -->
+<!-- 		<mapping class="com.softserve.edu.ReaderBooks" /> -->
+
+		<mapping class="com.softserve.train.Book" />
+		<mapping class="com.softserve.train.Reader" />
+
 	</session-factory>
 </hibernate-configuration>
