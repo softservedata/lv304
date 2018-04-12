@@ -42,9 +42,14 @@
 		<!-- - - - - - Spring JPA - - - - - -->
 		<org.spring-data-jpa.version>1.10.1.RELEASE</org.spring-data-jpa.version>
 		<!-- - - - - - Spring - - - - - -->
-		<org.springframework.version>5.0.4.RELEASE</org.springframework.version>
-		<org.spring.security.version>5.0.3.RELEASE</org.spring.security.version>
-		<org.spring.security.test>5.0.3.RELEASE</org.spring.security.test>
+<!-- 		<org.springframework.version>5.0.4.RELEASE</org.springframework.version> -->
+<!-- 		<org.spring.security.version>5.0.3.RELEASE</org.spring.security.version> -->
+<!-- 		<org.spring.security.test>5.0.3.RELEASE</org.spring.security.test> -->
+
+		<org.springframework.version>4.2.5.RELEASE</org.springframework.version> 
+	  	<org.spring.security.version>4.1.0.RELEASE</org.spring.security.version> 
+	  	<org.spring.security.test>4.0.1.RELEASE</org.spring.security.test> 
+
 		<org.springframework.ldap.version>2.3.2.RELEASE</org.springframework.ldap.version>
 		<!-- - - - - - Spring AspectJ - - - - - -->
 		<org.aspectj.version>1.8.13</org.aspectj.version>
