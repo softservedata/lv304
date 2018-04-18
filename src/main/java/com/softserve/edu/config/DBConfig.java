@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -15,13 +16,16 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 //@PropertySource("classpath:database.properties")
+//@ComponentScan("com.softserve.edu")
+@EnableJpaRepositories("com.softserve.edu.repository")
 public class DBConfig {
 	
 	//@Autowired
 	//private Environment env;
 
 	@Bean
-	public LocalContainerEntityManagerFactoryBean getEntityManagerFactoryBean() {
+	//public LocalContainerEntityManagerFactoryBean getEntityManagerFactoryBean() {
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean lcemfb = new LocalContainerEntityManagerFactoryBean();
 		lcemfb.setJpaVendorAdapter(getJpaVendorAdapter());
 		lcemfb.setDataSource(getDataSource());
@@ -50,7 +54,8 @@ public class DBConfig {
 	@Bean
 	public PlatformTransactionManager txManager() {
 		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager(
-				getEntityManagerFactoryBean().getObject());
+				//getEntityManagerFactoryBean().getObject());
+				entityManagerFactory().getObject());
 		return jpaTransactionManager;
 	}
 

@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.softserve.edu.entity.Person;
 import com.softserve.edu.repository.PersonRepository;
 
-@Repository
-public class PersonRepositoryImpl implements PersonRepository {
+//@Repository
+public class PersonRepositoryImpl {//implements PersonRepository {
 
 	@PersistenceContext
 	private EntityManager entityManager;
