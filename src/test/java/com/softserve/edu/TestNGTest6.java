@@ -29,7 +29,7 @@ public class TestNGTest6 {
     @AfterMethod
     public void afterMethod() {
         System.out.println("***@AfterMethod");
-        throw new RuntimeException("HaHaHA");
+        //throw new RuntimeException("HaHaHA");
     }
 
     //@AfterMethod(alwaysRun = true)
@@ -45,7 +45,7 @@ public class TestNGTest6 {
     @Test
     public void parameterFromPom() {
         System.out.println("Parameter from pom: " + System.getProperty("parameter.to.test"));
-        throw new RuntimeException("HaHaHA");
+        //throw new RuntimeException("HaHaHA");
     }
 
     
