@@ -25,6 +25,12 @@
 			<version>6.11</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- - - - Read from Excel formats, etc. - - - -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.16</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -64,12 +70,12 @@
 						</surefire.reports.directory>
 						<parameter.to.test>
 							${project.parameter}
-<!-- 							Ha-Ha-Ha -->
+							<!-- Ha-Ha-Ha -->
 						</parameter.to.test>
 					</systemPropertyVariables>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-						<suiteXmlFile>testng3.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>testng3.xml</suiteXmlFile> -->
 						<!-- <file>testng1.xml</file> -->
 					</suiteXmlFiles>
 					<reportsDirectory>${testng.reports.directory}</reportsDirectory>
