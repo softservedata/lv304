@@ -9,7 +9,7 @@ public class AppTest {
     
     @BeforeTest
     public void beforeTest() {
-        System.out.println("\t\t@BeforeTest - class AppTest");
+        System.out.println("\t\t@BeforeTest - class AppTest.");
     }
 
     @AfterTest
