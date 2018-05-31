@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -27,7 +28,15 @@ public class AppTest {
         // "C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver",
                 "target/test-classes/chromedriver-windows-32bit.exe");
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        //
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-proxy-server");
+        options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--start-fullscreen");
+        driver = new ChromeDriver(options);
+        //
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 

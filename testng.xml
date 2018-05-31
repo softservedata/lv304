@@ -8,6 +8,7 @@
 	<test verbose="5" name="Registrator_Test">
 		<classes>
 			<class name="com.softserve.edu.AppTest"/>
+<!-- 			<class name="com.softserve.edu.regres.tests.LocalizationTest"/> -->
 <!-- 				<methods> -->
 <!-- 					<include name="testApp" /> -->
 <!-- 				</methods> -->
